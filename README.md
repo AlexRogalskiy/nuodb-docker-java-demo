@@ -7,7 +7,7 @@ To deploy:
 ```
 argocd app create nuodb-docker-java-demo \
   --repo https://github.com/nuodb/nuodb-docker-java-demo.git \
-  --path nuodb-docker-java-demo \
+  --path argocd \
   --dest-server https://kubernetes.default.svc \
   --dest-namespace nuodb
 ```

@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nuodb-docker-java-demo-ui
+  name: nuodb-docker-java-demo
 spec:
   ports:
   - port: 8888
     targetPort: 8888
   selector:
-    app: nuodb-docker-java-demo-ui
+    app: nuodb-docker-java-demo

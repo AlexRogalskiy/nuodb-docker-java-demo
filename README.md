@@ -17,3 +17,5 @@ argocd app create nuodb-docker-java-demo \
   --dest-server https://kubernetes.default.svc \
   --dest-namespace nuodb
 ```
+
+The `--path` option defines where to find the YAML files to use for the deployment - in this case in the `argocd/` of this project.

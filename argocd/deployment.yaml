@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: nuodb-docker-java-demo-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: nuodb-docker-java-demo-ui
+  template:
+    metadata:
+      labels:
+        app: nuodb-docker-java-demo-ui
+    spec:
+      containers:
+      - image: localhost/nuodb-docker-java-demo-demo:1.0
+        name: nuodb-docker-java-demo-ui
+        ports:
+        - containerPort: 8888

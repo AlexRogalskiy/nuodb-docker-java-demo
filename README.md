@@ -2,6 +2,12 @@
 
 Java demo for using ArgoCD with NuoDB and Kubernetes.
 
+To create a container:
+
+1. In the project root run `mvn package` - this creates an executable jar in `docker/`
+2. Change to that directory: `cd docker`
+3. Create a container: `docker build -t nuodb-docker-java-demo:1.0 .`
+
 To deploy:
 
 ```

@@ -5,7 +5,7 @@ Java demo for using ArgoCD with NuoDB and Kubernetes.
 To deploy:
 
 ```
-argocd app create guestbook \
+argocd app create nuodb-docker-java-demo \
   --repo https://github.com/nuodb/nuodb-docker-java-demo.git \
   --path nuodb-docker-java-demo \
   --dest-server https://kubernetes.default.svc \

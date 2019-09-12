@@ -19,15 +19,16 @@ public class Main {
 			args = Arrays.copyOfRange(args, 1, args.length);
 
 		if (args.length != 3) {
-			System.out.println("Expected arguments: <username> <password> <database>");
-			System.out.println("   where <database> is either the name of a database on localhost");
-			System.out.println("                           or of the form <host>/<db-name>'");
-			System.exit(0);
+			System.out.println("Expected arguments: <username> <password> <nuodb-db>");
+			System.out.println("   where <nuodb-db> is a NuoDB database - either the name of a database on localhost");
+			System.out.println("                                              or of the form <host>/<db-name>");
+			System.out.println();
+			System.out.println("Defaulting to H2 in-memory database");
 		}
 
 		// Set connection properties from command-line?
 		// See method Javadoc for explanation
-		DemoBaseClass.setBootPropertiesFromCommandLine(args);
+		ConnectionHandler.setBootPropertiesFromCommandLine(args);
 
 		// ConfigurableApplicationContext ctx = //
 		SpringApplication.run(SpringBootJpaDemo.class, args);

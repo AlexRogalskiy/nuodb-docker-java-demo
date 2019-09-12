@@ -15,6 +15,8 @@ public class InfoController {
 	@GetMapping("/")
 	public String home() {
 		logger.info("Root URL");
+		
+		// TODO - Replace this with a Mustache template page
 		return "Possible URLs are:" //
 				+ "<ul>" //
 				+ "<li><a href='/accounts'>List all accounts: /accounts</a>" //
